@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
@@ -17,6 +17,7 @@ export default function TabLayout() {
     >
       <Tabs.Screen
         name='index'
+        initialParams={{ newTodo: false }}
         options={{
           title: 'Todo',
           tabBarIcon: ({ color, focused }) => (
